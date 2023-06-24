@@ -1,0 +1,193 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+
+@import url('./common/body.css');
+@import url('./common/reset.css');
+@import url('./common/utils.css');
+@import url('./common/main-btn.css');
+@import url('./common/slider-btn.css');
+@import url('./common/loader.css');
+@import url('./common/scrollup.css');
+
+/* Main page */
+@import url('./header.css');
+@import url('./home-page/home-page.css');
+@import url('./shopping-page/shopping-page.css');
+@import url('./support.css');
+@import url('./footer.css');
+/* Modals */
+@import url('./modals/modals.css');
+@import url('./modals/login-modal.css');
+@import url('./modals/mobile-menu.css');
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Fp2ywxg089UriCZaIGA.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Ap2ywxg089UriCZaw7BymDg.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Hp2ywxg089UriOZQ.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriAWCrOB8.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dmsans/v11/rP2Cp2ywxg089UriASitOB8.ttf) format('truetype');
+}
+:root {
+  --z-index-modal:5;
+
+  --brand-color: #4f2ee8;
+  --white-cl: #ffffff;
+  --black-cl: #111111;
+  --yellow-cl: #FFFF00;
+
+  /*Text*/
+  --main-light-txt-cl: #11111199; /*60%*/
+  --main-dark-txt-cl: #ffffff99; /*60%*/
+  --modal-txt: #11111180; /*50%*/
+  --modal-txt-dark: #f6f6f680; /*50%*/
+  --name-section-txt: #b4afaf;
+  --blank-shopping-list: #00000099; /*60%*/
+  --edit-sl-dark: #ffffff80; /*50%*/
+  --shadow: #00000026; /*15%*/
+  /* --modal-light-txt-cl:;
+    --modal-dark-txt-cl:; */
+
+  /*Buttons*/
+  /*--btn-border-cl:#4F2EE8;*/
+  --btn-modal: #f3f3f3;
+  --btn-modal-dark: #202024;
+  --btn-switch-theme: linear-gradient(rgb(255, 255, 255), rgb(247, 247, 247));
+  --scroll: #e0e0e0;
+  --scroll-up: #4f2ee84d; /*30%*/
+
+  --hover-light-cl: #4f2ee8;
+  --hover-dark-cl: #eac645;
+
+  /* Background */
+  --main-light-bg: #f6f6f6;
+  --main-dark-bg: #202024;
+  --shopping-list: #11111166; /*40%*/
+  --switch-light-theme: linear-gradient(rgb(79, 46, 232), rgb(220, 220, 220));
+  --switch-dark-theme: linear-gradient(rgb(79, 46, 232), rgb(104, 104, 104));
+  --gradient: radial-gradient(
+    at top right,
+    rgb(79, 46, 232),
+    rgb(255, 255, 255)
+  );
+  --shadow-header: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  --hover-light-cl: #4f2ee8;
+  --hover-dark-cl: #eac645;
+
+  /* Background */
+  --main-light-bg: #f6f6f6;
+  --main-dark-bg: #202024;
+  --shopping-list: #11111166; /*40%*/
+  --switch-light-theme: linear-gradient(rgb(79, 46, 232), rgb(220, 220, 220));
+  --switch-dark-theme: linear-gradient(rgb(79, 46, 232), rgb(104, 104, 104));
+  --gradient: radial-gradient(
+    at top right,
+    rgb(79, 46, 232),
+    rgb(255, 255, 255)
+  );
+
+  --white: #fff;
+  --drk: #111211
+
+  /* Other */
+  --z-index-header: 999;
+  --z-index-hero-cont: 1;
+  --z-index-rating-mark-block: 2;
+  --transit: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --loader: #4f2ee8;
+}
+[data-theme="dark"] {
+  --loader: #ffffff;
+  --brand-color: #4f2ee8;
+    --white-cl: #111111;
+    --black-cl: #ffffff;
+    --yellow-cl: #FFFF00;
+  
+
+    --main-light-txt-cl: #ffffff99;
+    --main-dark-txt-cl: #11111199;
+
+    --modal-txt-dark: #11111180;
+
+    --modal-txt: #f6f6f680;
+
+    --name-section-txt: #b4afaf;
+
+    --blank-shopping-list: #00000099;
+
+    --edit-sl-dark: #ffffff80;
+    --shadow: #00000026;
+
+    --btn-modal-dark: #f3f3f3;
+    --btn-modal: #202024;
+    --btn-switch-theme: linear-gradient(rgb(255, 255, 255), rgb(247, 247, 247));
+    --scroll: #e0e0e0;
+    --scroll-up: #4f2ee84d;
+    /*30%*/
+  
+    --hover-dark-cl: #4f2ee8;
+    --hover-light-cl: #eac645;
+  
+    /* Background */
+    --main-dark-bg: #f6f6f6;
+    --main-light-bg: #202024;
+    --shopping-list: #11111166;
+    /*40%*/
+    --switch-dark-theme: linear-gradient(rgb(79, 46, 232), rgb(220, 220, 220));
+    --switch-light-theme: linear-gradient(rgb(79, 46, 232), rgb(104, 104, 104));
+    --gradient: radial-gradient(at top right,
+        rgb(79, 46, 232),
+        rgb(255, 255, 255));
+    --shadow-header: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+    --hover-dark-cl: #4f2ee8;
+    --hover-light-cl: #eac645;
+  
+    /* Background */
+    --main-dark-bg: #f6f6f6;
+    --main-light-bg: #202024;
+    --shopping-list: #11111166;
+    /*40%*/
+    --switch-dark-theme: linear-gradient(rgb(79, 46, 232), rgb(220, 220, 220));
+    --switch-light-theme: linear-gradient(rgb(79, 46, 232), rgb(104, 104, 104));
+    --gradient: radial-gradient(at top right,
+        rgb(79, 46, 232),
+        rgb(255, 255, 255));
+
+}

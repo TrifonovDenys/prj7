@@ -1,0 +1,140 @@
+<header class="header1">
+  <div class="header-container container header">
+    <!-- Лого + навигация -->
+    <div class="logo-wrrap">
+      <a class="logo" href="/src/index.html">
+        <img
+          src="/src/images/header-logo/logo.png"
+          width="24"
+          height="24"
+          alt="logo"
+        />
+        <b class="logo-txt">Bookshelf</b>
+      </a>
+
+      <nav class="page-nav">
+        <ul class="nav-list">
+          <li class="nav-link">
+            <a class="link-txt" id="index" href="/src/index.html">home</a>
+          </li>
+          <li class="nav-link">
+            <a class="link-txt" id="shopping" href="/src/shopping.html">
+              shopping list
+              <svg class="shopping-icon" width="20px" height="20px">
+                <use href="./images/sprite.svg#icon-bag"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Свичер -->
+    <div class="switch-burg-wrrap">
+      <label class="switch theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <span class="slider round"></span>
+      </label>
+      <!-- Кнопка sign up -->
+      <button type="button" class="sign-up-btn">
+        Sign up
+        <svg class="sign-up-icon" width="20" height="20">
+          <use href="/src/images/sprite.svg#icon-arrow"></use>
+        </svg>
+      </button>
+      <!-- Кнопка с инфой юзера  -->
+      <!-- <button type="button" class="user-info-btn">
+        <svg class="" width="37" height="37">
+          <use href="/src/images/sprite.svg#"></use>
+        </svg>
+        <b>...</b>
+        <svg class="" width="23" height="26">
+          <use href="/src/images/sprite.svg#"></use>
+        </svg>
+      </button> -->
+
+      <!-- Бургер кнопки -->
+      <button
+        type="button"
+        class="mobile-menu-open js-open-menu"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+      >
+        <svg class="mobile-menu-open-icon burger" width="28" height="28">
+          <use class="burger" href="./images/sprite.svg#icon-menu"></use>
+        </svg>
+        <svg class="mobile-menu-open-icon cross-burger" width="28" height="28">
+          <use href="./images/sprite.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <button type="button" class="mobile-menu-close" data-menu-close>
+        <svg class="mobile-menu-close-icon" width="28" height="20">
+          <use class="close-icon" href="./images/sprite.svg#icon-cross"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- <div class="mobile-menu-open js-open-menu" id="mobile-menu">
+    <button class=" js-close-menu modal-order-box-btn">
+      <svg class="mobile-menu-open-icon" width="28" height="28">
+        <use class="burger" href="./images/sprite.svg#icon-menu"></use>
+      </svg>
+    </button>
+  
+    <ul class="mobile-menu">
+      <li><a href="#" class="nav-link link">Portfolio</a></li>
+      <li><a href="" class="nav-link link">Contacts</a></li>
+    </ul>
+  </div> -->
+
+  <script>
+    // const indexHtml = document.getElementById('index');
+    // const shoppingHtml = document.getElementById('shopping');
+    // const currentURL = window.location.pathname;
+
+    // if (currentURL === '/index.html') {
+    //   shoppingHtml.classList.remove('current');
+    //   indexHtml.classList.add('current');
+    // }
+    // if (currentURL === '/shopping.html') {
+    //   indexHtml.classList.remove('current');
+    //   shoppingHtml.classList.add('current');
+    // }
+
+    const toggleSwitch = document.querySelector(
+      '.theme-switch input[type="checkbox"]'
+    );
+
+    function switchTheme(e) {
+      if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    }
+
+    toggleSwitch.addEventListener('change', switchTheme, false);
+    // store user preference for future visits
+    function switchTheme(e) {
+      if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark'); //add this
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light'); //add this
+      }
+    }
+    const currentTheme = localStorage.getItem('theme')
+      ? localStorage.getItem('theme')
+      : null;
+
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+      }
+    }
+  </script>
+</header>
